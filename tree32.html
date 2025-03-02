@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calliandra spp.
+
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Calliandra spp.
+
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree32.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Calliandra spp.
+
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree32.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Calliandra spp.
+
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Powder Puff, Fairy Duster
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Fabaceae (Legume family)
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Evergreen Shrub or Small Tree
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Bipinnate, fern-like, delicate green leaves that fold at night
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Pink, red, white, or sometimes purple, forming fluffy, powder puff-like clusters
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Flat, elongated seed pods that dry and split open when mature
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate; prefers well-drained soil and benefits from regular watering in dry seasons
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes, Used in traditional medicine for anti-inflammatory, antiseptic, and wound-healing properties Some
+            species are believed to have sedative effects and are used for stress relief
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>मुस्सेंडा (Mussaenda) पारंपरिक औषधांमध्ये दाहशामक, विषाणूनाशक, आणि जखमा उपचार गुणधर्मांसाठी वापरली जाते.
+            काही प्रजातींचे सांद्रित परिणाम (sedative effects) असल्याचे मानले जाते आणि त्यांचा वापर तणाव कमी करण्यासाठी
+            केला जातो.
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Calliandra, commonly known as Powder Puff or Fairy Duster, is a tropical evergreen shrub or small tree from the
+      Fabaceae family. It is famous for its fluffy, powder puff-like flowers, which bloom in vibrant shades of pink,
+      red, white, or purple. Native to tropical and subtropical regions, it thrives in full sun with moderate water
+      needs, making it a low-maintenance ornamental plant.
+
+      The plant has bipinnate, fern-like leaves that close at night, adding to its delicate beauty. Its flowers attract
+      bees, butterflies, and hummingbirds, making it valuable for biodiversity and pollination. It produces flat seed
+      pods, which dry and split open when mature, releasing seeds.
+
+      Beyond aesthetics, Calliandra has medicinal uses. It is traditionally used for its anti-inflammatory, antiseptic,
+      and stress-relieving properties. Some species have sedative effects, helping in relaxation. Additionally, it helps
+      absorb carbon dioxide and release oxygen, improving air quality.
+
+      Widely used in gardens, hedges, and as bonsai, Calliandra is a favorite among landscape designers. Its fast
+      growth, resistance to drought, and ability to attract wildlife make it an excellent choice for eco-friendly
+      gardening and ornamental displays."
+
+
+
+    </p>
+    <p>
+      "कॅलियांड्रा (Calliandra), जी सामान्यतः पाउडर फफ किंवा फेरी डस्टर म्हणून ओळखली जाते, ही फॅबेसियासी कुटुंबातील एक
+      उष्णकटिबंधीय सदाहरित झुडूप किंवा लहान झाड आहे. त्याचे फुलांचे रंग गुलाबी, लाल, पांढरे, किंवा जांभळे असतात आणि ते
+      पावडर फफ प्रमाणे दिसतात. उष्णकटिबंधीय आणि उपउष्णकटिबंधीय प्रदेशांमध्ये मूळ असलेली ही वनस्पती पूर्ण सूर्यप्रकाशात
+      चांगली वाढते आणि मध्यम पाणी गरज असते, ज्यामुळे ती कमी देखभाल करणारी सजावटीची वनस्पती आहे.
+
+      ह्या वनस्पतीचे दुहेरी पिनेट, समृद्ध रंगाच्या पर्ण आहेत, जी रात्र्रीस बंद होतात आणि ती अधिक नाजूक दिसते. त्याचे
+      फुलांमुळे मिठीचे कीटक, सापळे आणि हमिंगबर्ड्स आकर्षित होतात, ज्यामुळे ते जैवविविधता आणि परागणासाठी महत्त्वपूर्ण
+      ठरते. याचे सपाट बी-धारक पापुद्रे तयार होतात, जे शुष्क होऊन पिकल्यावर उघडतात आणि बीज सोडतात.
+
+      सौंदर्याच्या पलीकडे, कॅलियांड्रा पारंपरिक औषधांमध्ये दाहशामक, विषाणूनाशक, आणि तणाव कमी करणारे गुणधर्मांसाठी वापरली
+      जाते. काही प्रजातींच्या सांद्रित परिणाम (sedative effects) असल्याचे मानले जाते, जे आराम करण्यास मदत करतात.
+      याव्यतिरिक्त, ह्या वनस्पतीने कार्बन डायऑक्साईड शोषित करणे आणि ऑक्सिजन मुक्त करणे, हवा शुद्धीकरणात योगदान देतात.
+
+      ज्यामुळे कॅलियांड्रा बागांमध्ये, कुंडल किंवा बन्साय म्हणून लोकप्रिय आहे. तिची जलद वाढ, दुष्काळाला तोंड देण्याची
+      क्षमता आणि वन्यजीव आकर्षित करण्याची क्षमता तिला पर्यावरण-अनुकूल बागकामासाठी आदर्श बनवते."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree32.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

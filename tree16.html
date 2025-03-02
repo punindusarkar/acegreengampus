@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dendropanax spp
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Dendropanax spp
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree16.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Dendropanax spp
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree16.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Dendropanax spp
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Dendropanax
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Araliaceae
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Evergreen Tree or Shrub
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Broad, leathery, and glossy green leaves
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, greenish-yellow flowers in clusters
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Small, dark-colored berries
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate to high (prefers moist, well-drained soil)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Used in traditional medicine for its anti-inflammatory and antimicrobial properties Believed to boost
+            immune health and aid in respiratory conditions Extracts have been studied for potential antioxidant and
+            anti-cancer effects
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>होय, पारंपरिक औषधांमध्ये याचा उपयोग त्याच्या दाहशामक (anti-inflammatory) आणि जंतुनाशक (antimicrobial)
+            गुणधर्मांसाठी केला जातो. हे रोगप्रतिकारक शक्ती वाढवण्यास मदत करते आणि श्वसन समस्यांमध्ये उपयोगी मानले जाते.
+            त्याच्या अर्काचा संभाव्य अँटीऑक्सिडंट आणि कर्करोगरोधी प्रभावांसाठी अभ्यास केला गेला आहे.
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Dendropanax is a genus of evergreen trees and shrubs belonging to the Araliaceae family, found in tropical and
+      subtropical regions of Asia and the Americas. These plants are known for their glossy, broad green leaves and
+      small greenish-yellow flowers that bloom in clusters. They produce dark-colored berries that attract birds and
+      other wildlife. The plant thrives in moist, well-drained soil with moderate to high water needs and prefers shaded
+      or partially sunny conditions.
+
+      Dendropanax species have been traditionally used in herbal medicine for their anti-inflammatory, antimicrobial,
+      and antioxidant properties. Some cultures use extracts to boost the immune system, relieve respiratory conditions,
+      and support overall health. Studies suggest that compounds found in Dendropanax may have potential anti-cancer
+      benefits, though more research is needed.
+
+      Aside from its medicinal value, Dendropanax plays an important ecological role, as it absorbs carbon dioxide and
+      releases oxygen, contributing to improved air quality. Some species are also used in landscaping for their
+      attractive foliage and adaptability to different growing conditions. With its medicinal, ecological, and
+      ornamental benefits, Dendropanax remains a valuable plant for both environmental sustainability and traditional
+      healing practices."
+
+
+    </p>
+
+    <p>
+      "डेंड्रोपॅनॅक्स (Dendropanax) ही सदाहरित झाडे आणि झुडपे असलेली एक वनस्पती प्रजाती आहे, जी अरॅलियासी (Araliaceae)
+      कुटुंबातील असून आशिया आणि अमेरिका खंडाच्या उष्णकटिबंधीय आणि उपोष्णकटिबंधीय प्रदेशात आढळते. या वनस्पतींना चमकदार,
+      मोठी हिरवी पाने असतात आणि त्यांचे लहान हिरवट-पिवळ्या रंगाचे फुले गुच्छांमध्ये फुलतात. या झाडांना गडद रंगाचे
+      बेरीसारखे फळ लागते, जे पक्षी आणि इतर वन्यजीवांना आकर्षित करतात. हे झाड आर्द्र, चांगल्या निचऱ्याच्या मातीमध्ये
+      चांगले वाढते आणि सावलीत किंवा अर्धसूर्यप्रकाशात चांगले फोफावते.
+
+      डेंड्रोपॅनॅक्स प्रजाती पारंपरिक औषधांमध्ये सूज कमी करणाऱ्या (anti-inflammatory), जंतुनाशक (antimicrobial) आणि
+      अँटीऑक्सिडंट गुणधर्मांसाठी वापरल्या जातात. काही संस्कृतींमध्ये याच्या अर्काचा उपयोग प्रतिकारशक्ती वाढवण्यासाठी,
+      श्वसनासंबंधी त्रास दूर करण्यासाठी आणि एकूणच आरोग्य सुधारण्यासाठी केला जातो. काही संशोधनांमध्ये असे सुचवले आहे की
+      डेंड्रोपॅनॅक्समधील विशिष्ट घटकांमध्ये कर्करोगविरोधी (anti-cancer) प्रभाव असू शकतो, परंतु यावर अधिक संशोधन आवश्यक
+      आहे.
+
+      औषधी गुणधर्मांव्यतिरिक्त, डेंड्रोपॅनॅक्स पर्यावरणासाठी महत्त्वाचा आहे, कारण तो कार्बन डायऑक्साइड शोषून ऑक्सिजन
+      सोडतो, ज्यामुळे हवेची गुणवत्ता सुधारते. काही प्रजाती त्यांच्या आकर्षक पानांमुळे आणि विविध हवामान परिस्थितींमध्ये
+      अनुकूल वाढीमुळे बागांमध्ये आणि लँडस्केपिंगसाठी वापरल्या जातात. औषधी, पर्यावरणपूरक आणि सौंदर्यदृष्ट्या मनोहर अशा या
+      वनस्पतीचे महत्त्व पारंपरिक चिकित्सा आणि पर्यावरणीय शाश्वततेत टिकून आहे."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree16.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

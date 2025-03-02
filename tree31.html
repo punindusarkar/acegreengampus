@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mussaenda spp
+
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Mussaenda spp
+
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree31.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Mussaenda spp
+
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree31.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Mussaenda spp
+
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Mussaenda, Bangkok Rose, Flag Bush
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Rubiaceae
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Evergreen Shrub or Small Tree
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Broad, ovate, dark green leaves with a velvety texture
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small yellow, white, or orange flowers surrounded by large, colorful sepals (white, pink, red, or peach)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Small, capsule-like fruit (rarely seen in cultivated plants)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate to high (prefers well-drained, moist soil and thrives in humid conditions)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Used in traditional medicine for treating wounds, fever, and respiratory infections Leaves and roots
+            have anti-inflammatory and antibacterial properties
+
+
+          </td>
+
+        </tr>
+        <td>Medicinal Uses In Marathi</td>
+        <td>"होय, पारंपरिक औषधांमध्ये जखमा, ताप आणि श्वसन संक्रमणांवर उपचार करण्यासाठी वापरले जाते.
+          पाने आणि मुळे यामध्ये दाहशामक (anti-inflammatory) आणि जिवाणूनाशक (antibacterial) गुणधर्म असतात."
+
+
+
+        </td>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Mussaenda is a tropical evergreen shrub or small tree belonging to the Rubiaceae family. Native to Asia and
+      Africa, it is widely grown in gardens, parks, and roadsides for its ornamental appeal. Unlike many flowering
+      plants, Mussaenda is admired for its large, colorful sepals, which come in shades of white, pink, red, and peach,
+      surrounding small yellow, white, or orange flowers. The leaves are broad, ovate, and dark green, adding to its
+      lush appearance.
+
+      This plant thrives in humid, tropical climates with moderate to high water requirements. It prefers well-drained,
+      moist soil and grows best in full sun to partial shade. Regular pruning helps maintain its shape and encourage
+      blooming. It is usually propagated through stem cuttings rather than seeds.
+
+      Mussaenda is not only admired for its beauty but also valued in traditional medicine. Its leaves and roots have
+      anti-inflammatory and antibacterial properties, used to treat wounds, fever, and respiratory infections.
+      Environmentally, it helps absorb carbon dioxide and release oxygen, contributing to air purification. With its
+      stunning floral display and medicinal benefits, Mussaenda remains a favorite in tropical landscaping and
+      traditional healing practices."
+
+
+
+    </p>
+    <p>
+      "मुस्सेंडा (Mussaenda) एक उष्णकटिबंधीय सदाहरित झुडूप किंवा लहान झाड आहे, जे रुबियासी कुटुंबाशी संबंधित आहे. आशिया
+      आणि आफ्रिकेमधील मूलस्थान असलेल्या या वनस्पतीला त्याच्या सजावटीच्या आकर्षणासाठी बागा, उद्याने आणि रस्त्यांवर मोठ्या
+      प्रमाणात लागवड केली जाते. इतर अनेक फुलांची वनस्पतींना उलट, मुस्सेंडाला त्याच्या मोठ्या, रंगीबेरंगी सेपल्स (संबंधी
+      असलेल्या पांढऱ्या, गुलाबी, लाल आणि आडवी रंगांच्या सेपल्स) साठी प्रेक्षित केलं जातं, जे छोटे पिवळे, पांढरे किंवा
+      नारिंगी फुलं वेढतात. त्याच्या पानांचा आकार मोठा, अंडाकार आणि गडद हिरवा असतो, जो त्याच्या गडद आकर्षणाला आणखी
+      वाढवतो.
+
+      ही वनस्पती उष्ण आणि आर्द्र जलवायू मध्ये चांगली वाढते, ज्याला मध्यम ते उच्च पाण्याची आवश्यकता असते. ती चांगल्या
+      निचऱ्या असलेल्या, ओलसर मातीमध्ये प्राधान्य देते आणि पूर्ण सूर्यप्रकाशापासून अर्धछाया पर्यंत उत्तम वाढते. नियमित
+      छाटणी केली तर तिच्या आकारात ठेवता येते आणि फुलांची बहर वाढवता येतो. ती सामान्यतः संपूर्वक कटिंग्ज द्वारा प्रचारित
+      केली जाते, बीयांद्वारे नाही.
+
+      मुस्सेंडाचा सौंदर्याशीच संबंध नाही, तर पारंपरिक औषधांमध्ये तिचा उपयोग जखमा, ताप आणि श्वसन संक्रमणांवर उपचार
+      करण्यासाठी केला जातो. तिच्या पानांचा आणि मुळांचा दाहशामक (anti-inflammatory) आणि जिवाणूनाशक (antibacterial)
+      गुणधर्म असतो. पर्यावरणीय दृष्टिकोनातून, ती कार्बन डायऑक्साइड शोषून घेते आणि ऑक्सिजन सोडते, ज्यामुळे हवेची शुद्धता
+      सुधारते. तिच्या आकर्षक फुलांच्या प्रदर्शनाने आणि औषधी गुणधर्मांमुळे, मुस्सेंडा उष्णकटिबंधीय लँडस्केपिंग आणि
+      पारंपरिक उपचार पद्धतींमध्ये आवडती आहे."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree31.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

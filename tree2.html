@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piptadenia peregrina
+  </title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Piptadenia peregrina
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree2.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Piptadenia peregrina
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Piptadenia peregrina
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Jurema, Black Jurema</td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Fabaceae (Legume family)</td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Tree</td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Compound leaves with bipinnate leaflets.</td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Yellowish-green or cream.</td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Legume (pod containing seeds).
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Medium (thrives in well-drained soils with moderate water).</td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes. Some species of Piptadenia have been used in traditional medicine for their potential psychoactive
+            and healing properties.</td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td> होय. काही पिप्टाडेनिया प्रजाती पारंपरिक औषधांमध्ये त्यांच्या संभाव्य मानसिक सक्रिय आणि उपचारात्मक
+            गुणधर्मांसाठी वापरल्या गेल्या आहेत.
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      The **Piptadenia peregrina**, commonly known as Jurema or Black Jurema, is a leguminous tree belonging to the
+      family Fabaceae. Native to South America, particularly Brazil, this tree thrives in tropical and subtropical
+      regions. It is known for its bipinnate compound leaves and yellowish-green to cream-colored flowers, which grow in
+      clusters and enhance its ornamental value. The tree produces elongated legume pods containing seeds, typical of
+      plants in the legume family.
+
+      Piptadenia is ecologically significant due to its ability to fix nitrogen in the soil, improving soil fertility
+      and aiding reforestation efforts. It has medium water requirements and prefers well-drained soils, making it a
+      sustainable choice for improving degraded land.
+
+      In traditional medicine, parts of the Piptadenia tree have been used for their potential healing and psychoactive
+      properties. However, caution is advised, as some species contain alkaloids that may be toxic if misused.
+
+      This tree plays an essential role in carbon sequestration, absorbing carbon dioxide and releasing oxygen, thereby
+      contributing to a healthier environment. Beyond its ecological and medicinal importance, Piptadenia has cultural
+      significance in indigenous practices and is valued for its resilience and adaptability in diverse ecosystems.
+    </p>
+
+    <p>
+      "पिप्टाडेनिया पेरेग्रीना (Piptadenia peregrina), ज्याला सामान्यतः जुरेमा किंवा ब्लॅक जुरेमा म्हणतात, हा फॅबेसी
+      (Fabaceae) कुटुंबातील एक दलहन (leguminous) वृक्ष आहे. हा वृक्ष दक्षिण अमेरिका, विशेषतः ब्राझीलचा मूळ रहिवासी असून,
+      तो उष्णकटिबंधीय आणि उपोष्णकटिबंधीय भागांमध्ये चांगल्या प्रकारे वाढतो. याची पाने द्विपक्षीय संयुक्त (bipinnate
+      compound) असतात आणि याचे फुले पिवळसर-हिरव्या ते क्रीम रंगाचे असतात, जी झुपक्यांमध्ये वाढतात आणि त्याच्या सौंदर्यात
+      भर घालतात. हा वृक्ष लांब शेंगा (legume pods) तयार करतो, ज्यामध्ये बिया असतात, जे लेग्यूम कुटुंबातील वनस्पतींसाठी
+      वैशिष्ट्यपूर्ण आहे.
+
+      पिप्टाडेनिया पारिस्थितिकदृष्ट्या महत्त्वाचा आहे, कारण तो जमिनीत नायट्रोजन स्थिर करून मातीची सुपीकता सुधारतो आणि
+      पुनर्रोपण (reforestation) प्रयत्नांना मदत करतो. त्याला मध्यम प्रमाणात पाण्याची गरज असते आणि तो चांगल्या निचऱ्याची
+      जमीन पसंत करतो, त्यामुळे हा खराब झालेली जमीन सुधारण्यासाठी एक टिकाऊ पर्याय आहे.
+
+      पारंपरिक औषधांमध्ये, पिप्टाडेनिया वृक्षाच्या वेगवेगळ्या भागांचा उपचारात्मक आणि मानसिक सक्रिय (psychoactive)
+      गुणधर्मांसाठी वापर केला जातो. मात्र, काही प्रजातींमध्ये विषारी एल्कलॉइड (alkaloids) असतात, त्यामुळे त्याचा चुकीचा
+      वापर टाळावा.
+
+      हा वृक्ष कार्बन शोषण (carbon sequestration) प्रक्रियेत महत्त्वाची भूमिका बजावतो, कारण तो कार्बन डायऑक्साइड शोषून
+      घेतो आणि ऑक्सिजन सोडतो, ज्यामुळे पर्यावरणाची गुणवत्ता सुधारते. त्याच्या पर्यावरणीय आणि औषधी महत्त्वासोबतच,
+      पिप्टाडेनियाचे सांस्कृतिक मूल्यही आहे, कारण तो काही आदिवासी परंपरांमध्ये वापरला जातो. विविध परिसंस्थांमध्ये तग
+      धरण्याची आणि अनुकूलनाची त्याची क्षमता याला अत्यंत मौल्यवान बनवते."
+
+    </p>
+  </div>
+
+   
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree2.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

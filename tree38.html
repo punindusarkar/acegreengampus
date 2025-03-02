@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heterospathe spp
+
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Heterospathe spp
+
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree38.jpeg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Heterospathe spp
+
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree38.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Heterospathe spp
+
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Heterospathe Palm
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Arecaceae (Palm family)
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Tropical palm tree
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Pinnate (feather-like) leaves with a graceful arching appearance
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, cream to yellowish flowers
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Small, round, red or orange drupes when mature
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate to high; prefers moist, well-drained soil
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>No known significant medicinal uses
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>कोणतेही औषधी उपयोग नाहीत; पचवले तर विषारी आहे.
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "The Heterospathe genus belongs to the Arecaceae family and consists of graceful, tropical palms native to
+      Southeast Asia and the Pacific Islands. These palms are commonly grown for their aesthetic appeal, featuring
+      pinnate (feather-like) fronds that arch elegantly. They thrive in humid, tropical climates, requiring moist,
+      well-drained soil and moderate to high watering.
+
+      Heterospathe palms produce small cream-to-yellow flowers, which develop into bright red or orange drupes when
+      mature. They are primarily used in gardens, landscapes, and as indoor plants, adding a tropical feel to any
+      environment. These palms also contribute to air purification, as they absorb carbon dioxide and release oxygen,
+      improving indoor air quality and humidity.
+
+      While not known for medicinal uses, Heterospathe palms are valued in horticulture for their ornamental beauty.
+      They are often planted along walkways, in tropical resorts, and in botanical gardens. Some species can grow tall,
+      making them ideal for outdoor landscapes, while others are compact, suitable for indoor decoration.
+
+      Due to their low-maintenance nature, these palms are a popular choice for plant enthusiasts who want to add a
+      touch of the tropics to their surroundings."
+
+
+
+    </p>
+    <p>
+      "हेटेरोस्पाथे जात अरेसी कुटुंबाशी संबंधित आहे आणि दक्षिण-पूर्व आशिया आणि पॅसिफिक बेटांच्या मूळ असलेल्या सौम्य,
+      उष्णकटिबंधीय ताडांच्या झाडांचा समावेश करते. या ताडाच्या झाडांचा सामान्यतः सौंदर्यात्मक आकर्षणासाठी वापर केला जातो,
+      ज्यामध्ये पिन्नेट (पंखांसारखे) पर्ण असतात, जे सुंदरपणे वळलेले असतात. हे उष्णकटिबंधीय, आर्द्र हवामानात उत्तम
+      वाढतात, ज्यासाठी ओलसर, चांगली निचरा होणारी माती आणि मध्यम ते जास्त पाणी आवश्यक आहे.
+
+      हेटेरोस्पाथे ताडाचे झाड छोटे क्रीम ते पिवळ्या रंगाचे फुलांचे उत्पादन करतात, जे परिपक्व झाल्यावर उज्ज्वल लाल किंवा
+      नारिंगी रंगाचे ड्रूप्समध्ये रूपांतरित होतात. त्यांचा मुख्य उपयोग बागांमध्ये, लँडस्केप्समध्ये आणि घरातील वनस्पती
+      म्हणून केला जातो, ज्यामुळे कोणत्याही वातावरणात उष्णकटिबंधीय भावना आणते. या ताडाच्या झाडांमुळे हवा शुद्ध होण्यास
+      मदत होते, कारण ते कार्बन डायऑक्साइड शोषून घेतात आणि ऑक्सिजन मुक्त करतात, ज्यामुळे घराच्या आतल्या हवेमध्ये सुधारणा
+      होते आणि आर्द्रता वाढते.
+
+      औषधी वापरासाठी ज्ञात नसले तरी, हेटेरोस्पाथे ताडाची झाडे त्याच्या सजावटीच्या सौंदर्यामुळे बागायतीत महत्त्वपूर्ण
+      असतात. ते सहसा पायवाटा, उष्णकटिबंधीय रिसॉर्ट्स आणि वनस्पती उद्याने यांमध्ये लावली जातात. काही प्रजाती उंच वाढू
+      शकतात, ज्यामुळे त्यांना बाह्य लँडस्केप्ससाठी आदर्श बनवते, तर काही लहान असतात, ज्यामुळे ते घरातील सजावटीसाठी योग्य
+      ठरतात.
+
+      त्यांच्या कमी देखभाल आवश्यकतेमुळे, हे ताडाचे झाडे वनस्पती प्रेमींच्या आवडत्या निवडीमध्ये एक आहेत, जे आपल्या
+      परिसरात उष्णकटिबंधीय स्पर्श आणू इच्छितात."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree38.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

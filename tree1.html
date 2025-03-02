@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Ocimum tenuiflorum (also known as Ocimum sanctum)
+    "
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>"Ocimum tenuiflorum (also known as Ocimum sanctum)
+      "
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree1.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to"Ocimum tenuiflorum (also known as Ocimum sanctum)
+          "
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>"Ocimum tenuiflorum (also known as Ocimum sanctum)
+              "
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Holy Basil, Tulsi
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Lamiaceae
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Perennial Herb
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Small, aromatic, oval-shaped leaves (green or purple in color)
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, purple or white flowers in elongated spikes
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Tiny, brown or black seeds
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate (requires well-drained soil and regular watering)
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Boosts immunity and fights infections Used for treating colds, coughs, and respiratory issues Has
+            anti-inflammatory, antifungal, and antibacterial properties Helps regulate blood sugar and reduces stress
+            Used in Ayurvedic medicine for digestive health and heart protection
+          </td>
+        </tr>
+        <td>Medicinal Uses In Marathi</td>
+        <td>रोगप्रतिकारक शक्ती वाढवतो आणि संसर्गांशी लढतो. सर्दी, खोकला आणि श्वसन समस्यांवर उपचार करण्यासाठी वापरला
+          जातो. यामध्ये दाहशामक, अँटीफंगल आणि अँटीबॅक्टेरियल गुणधर्म आहेत. रक्तातील साखर नियंत्रित करण्यास आणि तणाव कमी
+          करण्यास मदत करते. आयुर्वेदिक औषधांमध्ये पचन आरोग्य आणि हृदयाच्या संरक्षणासाठी वापरला जातो.
+
+        </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Holy Basil, commonly known as Tulsi, is a highly revered plant in India and Southeast Asia, known for its
+      medicinal, religious, and environmental benefits. It belongs to the Lamiaceae family and is a small, aromatic herb
+      with green or purple leaves and tiny white or purple flowers. Tulsi is a hardy plant that grows well in warm
+      climates with moderate water needs.
+
+      Holy Basil is widely used in Ayurvedic medicine due to its powerful antibacterial, antifungal, and
+      anti-inflammatory properties. It is commonly consumed as tea or herbal extract to boost immunity, improve
+      digestion, and relieve respiratory issues like coughs and colds. It also helps in reducing stress, regulating
+      blood sugar, and supporting heart health.
+
+      Besides its medicinal properties, Tulsi is sacred in Hinduism, often planted near temples and homes for spiritual
+      and environmental benefits. It is believed to purify the surroundings and promote well-being. The plant plays an
+      important environmental role by absorbing carbon dioxide and releasing oxygen, making it an excellent air
+      purifier. Additionally, it acts as a natural mosquito repellent. With its vast health benefits, Holy Basil remains
+      a vital part of traditional and modern herbal medicine."
+
+    </p>
+    <p>
+      "पवित्र तुळस, जी सामान्यतः तुळस म्हणून ओळखली जाते, भारत आणि दक्षिणपूर्व आशियामध्ये अत्यंत पूजनीय वनस्पती आहे, जिला
+      तिच्या औषधीय, धार्मिक आणि पर्यावरणीय फायद्यांसाठी ओळखले जाते. ही लॅमिएसी कुटुंबातील एक छोटी, सुगंधी वनस्पती आहे,
+      जिनच्या पाने हिरवी किंवा जांभळी असतात आणि त्यावर लहान पांढरे किंवा जांभळट फुले येतात. तुळस एक मजबूत वनस्पती आहे,
+      जी उष्ण हवामानात मध्यम प्रमाणात पाणी दिल्यास चांगली वाढते.
+
+      पवित्र तुळशीचा आयुर्वेदिक औषधांमध्ये मोठ्या प्रमाणावर उपयोग केला जातो, कारण त्यामध्ये शक्तिशाली अँटीबॅक्टेरियल,
+      अँटीफंगल आणि अँटी-इंफ्लेमेटरी गुणधर्म असतात. तिला चहा किंवा हर्बल अर्काच्या स्वरूपात सेवन केले जाते, ज्यामुळे
+      रोगप्रतिकारक शक्ती वाढते, पचन सुधारते आणि सर्दी-खोकल्यासारख्या श्वसनाच्या समस्या दूर होतात. तसेच, तणाव कमी
+      करण्यास, रक्तातील साखर नियंत्रित करण्यास आणि हृदयाच्या आरोग्यास मदत करते.
+
+      औषधीय गुणांव्यतिरिक्त, तुळस हिंदू धर्मात पवित्र मानली जाते आणि मंदिरांजवळ तसेच घरोघरी लावली जाते, कारण ती
+      आध्यात्मिक आणि पर्यावरणीय लाभ देते. असे मानले जाते की ती वातावरण शुद्ध करते आणि आरोग्यसाठी उपयुक्त ठरते. हा
+      वनस्पती पर्यावरणासाठीही महत्त्वाचा आहे, कारण तो कार्बन डायऑक्साइड शोषून ऑक्सिजन सोडतो, ज्यामुळे तो एक उत्कृष्ट हवा
+      शुद्ध करणारा वनस्पती ठरतो. शिवाय, तुळस नैसर्गिक डास प्रतिरोधक म्हणून देखील कार्य करते. आपल्या विस्तृत आरोग्य
+      फायद्यांमुळे, पवित्र तुळस पारंपरिक तसेच आधुनिक हर्बल औषधांचा एक महत्त्वाचा भाग आहे."
+
+    </p>
+  </div>
+
+  
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree1.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

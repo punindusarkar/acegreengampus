@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ixora coccinea
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Ixora coccinea
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree23.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Ixora coccinea
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree23.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Ixora coccinea
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Jungle Geranium, Flame of the Woods, Scarlet Ixora
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Rubiaceae
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Evergreen Shrub
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Glossy, leathery, dark green leaves
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Bright red, orange, yellow, or pink
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Small, round, dark purple or black berries
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate to high (prefers well-drained, moist soil)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Traditionally used for treating wounds, ulcers, and skin infections Has anti-inflammatory and
+            antimicrobial properties Used in herbal remedies for fever, dysentery, and stomach ailments Some extracts
+            are believed to have antioxidant and immune-boosting effects
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>होय, पारंपरिकरीत्या जखमा, अल्सर आणि त्वचेच्या संसर्गांवर उपचार करण्यासाठी वापरले जाते. यात दाहशामक आणि
+            जंतुनाशक गुणधर्म असतात. ताप, प्रवाहिका आणि पोटाच्या आजारांवर औषधी उपचारांमध्ये याचा वापर केला जातो. काही
+            अर्क अँटीऑक्सिडंट आणि रोगप्रतिकारशक्ती वाढवणारे असल्याचे मानले जाते.
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Jungle Geranium (Ixora coccinea), also known as Flame of the Woods or Scarlet Ixora, is an evergreen shrub from
+      the Rubiaceae family, native to tropical Asia and India. It is well known for its brightly colored flowers, which
+      appear in clusters and come in shades of red, orange, yellow, and pink. The plant has dark green, glossy, leathery
+      leaves and produces small, dark purple or black berries. It thrives in moist, well-drained soil and requires
+      moderate to high water levels, making it suitable for tropical and subtropical climates.
+
+      Jungle Geranium has been used in traditional medicine for its anti-inflammatory, antimicrobial, and antioxidant
+      properties. It has been applied in treating wounds, skin infections, fever, dysentery, and stomach ailments. Some
+      extracts are also believed to boost immunity and support overall health.
+
+      Apart from its medicinal uses, Ixora coccinea is an important ornamental plant used in landscaping, hedges, and
+      borders due to its dense, bushy growth. It attracts butterflies and pollinators, enhancing biodiversity in
+      gardens. Additionally, it absorbs carbon dioxide and releases oxygen, contributing to a healthier environment.
+      With its aesthetic appeal and medicinal value, Jungle Geranium remains a popular choice for gardeners and
+      herbalists alike."
+
+
+    </p>
+
+    <p>
+
+      "जंगल जेरॅनियम (Ixora coccinea), ज्याला फ्लेम ऑफ द वुड्स किंवा स्कारलेट इक्झोरा म्हणूनही ओळखले जाते, हा रुबिएसी
+      कुटुंबातील एक सदाहरित झुडूप आहे, जो मुख्यतः उष्णकटिबंधीय आशिया आणि भारतात आढळतो. हा आपल्या चमकदार रंगांच्या
+      फुलांसाठी ओळखला जातो, जी झुपक्यांनी फुलतात आणि लाल, नारंगी, पिवळ्या आणि गुलाबी रंगांमध्ये आढळतात. या वनस्पतीच्या
+      पानांना गडद हिरवे, चमकदार आणि चामड्यांसारखे स्वरूप असते, आणि ती लहान, गडद जांभळ्या किंवा काळ्या रंगाची फळे तयार
+      करते. हा वनस्पती ओलसर, चांगल्या निचऱ्याच्या मातीमध्ये चांगला वाढतो आणि मध्यम ते जास्त प्रमाणात पाणी आवश्यक असते,
+      ज्यामुळे तो उष्णकटिबंधीय आणि उपोष्णकटिबंधीय हवामानासाठी उपयुक्त ठरतो.
+
+      जंगल जेरॅनियमचा पारंपरिक औषधांमध्ये दाहशामक, जंतुनाशक आणि अँटीऑक्सिडंट गुणधर्मांसाठी उपयोग केला जातो. त्याचा उपयोग
+      जखमा, त्वचेचे संसर्ग, ताप, प्रवाहिका आणि पोटाच्या तक्रारींवर उपचार करण्यासाठी केला जातो. काही अर्क प्रतिकारशक्ती
+      वाढवण्यासाठी आणि एकूणच आरोग्यास मदत करण्यासाठी उपयुक्त मानले जातात.
+
+      औषधी उपयोगांव्यतिरिक्त, Ixora coccinea हा एक महत्त्वाचा शोभिवंत वनस्पती आहे, जो बागांमध्ये, कुंपणांमध्ये आणि
+      सीमारेषांमध्ये घनदाट झुडूपासारखा वाढत असल्यामुळे लावला जातो. हा फुलपाखरे आणि परागीकरण करणाऱ्या कीटकांना आकर्षित
+      करतो, ज्यामुळे जैवविविधतेला चालना मिळते. याशिवाय, हा कार्बन डायऑक्साइड शोषून ऑक्सिजन सोडतो, ज्यामुळे पर्यावरणाला
+      फायदा होतो. आपल्या सौंदर्यदृष्ट्या आकर्षक रूपामुळे आणि औषधी गुणधर्मांमुळे, जंगल जेरॅनियम माळी आणि औषधी
+      तज्ज्ञांच्या पसंतीस उतरतो."
+
+    </p>
+  </div>
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree23.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

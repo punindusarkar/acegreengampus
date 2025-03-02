@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euphorbia tithymaloides
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Euphorbia tithymaloides
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree7.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Euphorbia tithymaloides
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree7.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Euphorbia tithymaloides
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Red Spurge, Santa Teresa, Slippery Spurge, or Devil's Backbone
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Euphorbiaceae
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Shrub
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Succulent, oblong, and arranged alternately along the stem. The leaves are typically green but may turn
+            reddish under stress or in direct sunlight.
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, inconspicuous, greenish-yellow flowers, surrounded by bright red or pink bracts.
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Capsule (produces seeds inside a three-lobed capsule).
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Low to medium (prefers well-drained soil and tolerates dry conditions once established).
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes.The plant has been used in folk medicine for its purgative, anti-inflammatory, and antimicrobial
+            properties. However, it should be handled with caution due to its toxic sap, which can cause skin irritation
+            or other adverse effects if not used properly.
+          </td>
+
+        </tr>
+        <td>Medicinal Uses In Marathi</td>
+        <td>
+          होय, हा वनस्पती पारंपरिक औषधांमध्ये रेचक, दाहशामक (सूजन कमी करणारा) आणि जिवाणूनाशक गुणधर्मांसाठी वापरण्यात आला
+          आहे. मात्र, त्याचा वापर काळजीपूर्वक करावा, कारण त्यातील विषारी रस त्वचेला त्रास देऊ शकतो किंवा योग्य प्रकारे न
+          वापरल्यास इतर दुष्परिणाम होऊ शकतात.
+
+        </td>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "**Euphorbia tithymaloides**, commonly known as Red Spurge, Devil’s Backbone, or Santa Teresa, is a tropical shrub
+      from the Euphorbiaceae family. Native to the Americas, it is widely cultivated as an ornamental plant due to its
+      striking appearance and vibrant red or pink bracts surrounding small, inconspicuous greenish-yellow flowers. The
+      plant has succulent, oblong leaves that are alternately arranged along the stem, typically green, but they may
+      turn reddish under stress or exposure to direct sunlight.
+
+      This shrub is well-suited for hot, dry climates and is known for its ability to tolerate drought once established.
+      It requires well-drained soil and has low to medium water requirements. *Euphorbia tithymaloides* is commonly
+      grown in gardens or as a houseplant in temperate regions, where it adds a unique visual appeal.
+
+      In traditional medicine, the plant has been used for its anti-inflammatory, antimicrobial, and purgative
+      properties. However, it should be handled with care, as the plant’s milky sap is toxic and can cause skin
+      irritation or even more severe reactions if ingested or improperly handled.
+
+      Like all plants, *Euphorbia tithymaloides* absorbs carbon dioxide and releases oxygen, helping to purify the air
+      in its environment. Despite its toxicity, it remains a popular choice for adding color to gardens and landscapes."
+
+    </p>
+    <p>
+      "यूफोर्बिया तिथिमालोइड्स (Euphorbia tithymaloides), ज्याला रेड स्पर्ज, डेविल्स बॅकबोन किंवा सांता टेरेसा असेही
+      म्हणतात, हा यूफोर्बिएसी कुटुंबातील एक उष्णकटिबंधीय झुडूप आहे. हा अमेरिका येथे मूळचा आहे आणि त्याच्या आकर्षक
+      रंगामुळे आणि छोटेसे हिरवट-पिवळ्या फुलांभोवती लालसर किंवा गुलाबी ब्रॅक्ट्स असण्यामुळे सजावटीच्या वनस्पती म्हणून
+      मोठ्या प्रमाणात लागवड केली जाते.
+
+      या झुडुपाची पाने रसाळ (succulent), लांबट-आयताकृती असून ती खोडावर एकाआड एक असतात. ही सामान्यतः हिरव्या रंगाची
+      असतात, परंतु तणाव किंवा तीव्र उन्हाच्या संपर्कात आल्यावर लालसर होतात. हा वनस्पती गरम आणि कोरड्या हवामानासाठी अतिशय
+      योग्य आहे आणि पूर्ण वाढ झाल्यानंतर तेथील कोरडे हवामान सहन करू शकतो. याला चांगल्या निचर्‍याची माती आणि मध्यम ते कमी
+      पाणी लागते.
+
+      पारंपरिक औषधांमध्ये, हा दाहशामक (anti-inflammatory), जंतूनाशक (antimicrobial) आणि रेचक (purgative) म्हणून वापरला
+      जातो. मात्र, हा सावधगिरीने हाताळावा लागतो, कारण याच्या दुधाळ रसामध्ये विषारी घटक असतात, जे त्वचेवर अलर्जी किंवा
+      जळजळ निर्माण करू शकतात. तसेच, तो गिळल्यास गंभीर दुष्परिणाम होऊ शकतात.
+
+      इतर झाडांप्रमाणे, Euphorbia tithymaloides कार्बन डायऑक्साइड शोषून ऑक्सिजन सोडतो, ज्यामुळे पर्यावरणातील हवेची
+      गुणवत्ता सुधारते. त्याच्या विषारी स्वरूपामुळे सावधगिरी बाळगावी लागते, पण तरीही तो आपल्या चमकदार सौंदर्यासाठी आणि
+      वैशिष्ट्यपूर्ण आकारासाठी बागांमध्ये आणि लँडस्केप डिझाइनमध्ये लोकप्रिय आहे."
+
+    </p>
+  </div>
+
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree7.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

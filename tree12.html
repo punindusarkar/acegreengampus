@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murraya paniculata
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Murraya paniculata </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree12.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Murraya paniculataInformation</h2>
+        <audio controls autoplay>
+          <source src="audios\tree12.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Murraya paniculata</i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Orange Jessamine, Mock Orange, Orange Jasmine
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Rutaceae
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Evergreen shrub or small tree
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Glossy, lance-shaped, dark green leaves with a leathery texture
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>White, fragrant flowers that resemble orange blossoms
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Berry (small, round, and red to orange when ripe)
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Medium to high (prefers moist, well-drained soil, and regular watering)
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes. In traditional medicine, Murraya paniculata has been used for its anti-inflammatory and antimicrobial
+            properties.The plant's leaves and flowers are sometimes used in herbal remedies for ailments like fever,
+            headaches, and gastrointestinal issues.
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>होय। पारंपरिक औषधांमध्ये, Murraya paniculata चा उपयोग त्याच्या दाहशामक आणि जंतुनाशक गुणधर्मांसाठी केला
+            जातो. या वनस्पतीची पाने आणि फुले कधीकधी ताप, डोकेदुखी आणि पचनासंबंधी समस्यांसाठी हर्बल उपचार म्हणून वापरली
+            जातात.
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "**Orange Jessamine** (*Murraya paniculata*), also known as Mock Orange or Orange Jasmine, is an evergreen shrub
+      or small tree from the Rutaceae family, native to Southeast Asia, particularly India, Malaysia, and the
+      Philippines. Known for its glossy, lance-shaped dark green leaves and fragrant white flowers, which resemble
+      orange blossoms, it is widely cultivated for its ornamental and aromatic value. The flowers are produced
+      year-round, adding beauty and a pleasant fragrance to gardens, hedges, and as a houseplant.
+
+      The plant thrives in moist, well-drained soil and prefers medium to high water levels. It flourishes in full sun
+      but can tolerate partial shade, making it suitable for a variety of garden settings. *Orange Jessamine* is best
+      suited to tropical and subtropical climates, although it can be grown in temperate areas if protected from frost.
+
+      The plant has medicinal uses, with its leaves and flowers utilized in traditional remedies for their
+      anti-inflammatory, antimicrobial, and pain-relieving properties. *Murraya paniculata* has been used to treat
+      fever, headaches, and gastrointestinal issues.
+
+      In addition to its ornamental and medicinal qualities, *Orange Jessamine* also contributes to environmental health
+      by absorbing carbon dioxide and releasing oxygen, helping to purify the air. Its beauty, fragrance, and practical
+      uses make it a valuable plant in gardens and therapeutic settings."
+
+    </p>
+
+    <p>
+      "ऑरेंज जॅस्मिन (Murraya paniculata), ज्याला मॉक ऑरेंज किंवा ऑरेंज जॅस्मिन असेही म्हणतात, हा रूटेसी कुटुंबातील
+      सदाहरित झुडूप किंवा लहान वृक्ष आहे, जो मुख्यतः दक्षिण-पूर्व आशिया, विशेषतः भारत, मलेशिया आणि फिलीपिन्समधील मूळ
+      आहे. हा वनस्पती त्याच्या चमकदार, भाल्यासारख्या गडद हिरव्या पानांसाठी आणि नारंगी फुलांसारख्या दिसणाऱ्या सुगंधित
+      पांढऱ्या फुलांसाठी ओळखला जातो. त्याच्या शोभिवंत आणि सुगंधी गुणधर्मांमुळे याची मोठ्या प्रमाणावर लागवड केली जाते. हे
+      फूल वर्षभर येते, ज्यामुळे बाग, कुंपण आणि घरासाठी एक आकर्षक आणि सुगंधी पर्याय ठरतो.
+
+      हा वनस्पती ओलसर, चांगली निचरा होणाऱ्या मातीमध्ये चांगला वाढतो आणि मध्यम ते जास्त पाणी आवश्यक असते. पूर्ण
+      सूर्यप्रकाशात तो उत्तम वाढतो, परंतु अंशतः सावली सहन करू शकतो, त्यामुळे विविध बागायती परिस्थितीसाठी योग्य आहे.
+      ऑरेंज जॅस्मिन उष्णकटिबंधीय आणि उपोष्णकटिबंधीय हवामानासाठी सर्वोत्तम आहे, परंतु योग्य संरक्षण दिल्यास समशीतोष्ण
+      भागातही वाढवता येतो.
+
+      या वनस्पतीला औषधी गुणधर्मही आहेत. त्याची पाने आणि फुले पारंपरिक उपचारांमध्ये दाहशामक, जंतुनाशक आणि वेदनाशामक
+      गुणधर्मांसाठी वापरली जातात. Murraya paniculata चा वापर ताप, डोकेदुखी आणि पचनासंबंधी समस्या उपचारांसाठी केला जातो.
+
+      याच्या शोभिवंत आणि औषधी फायद्यांशिवाय, ऑरेंज जॅस्मिन पर्यावरणालाही मदत करतो. तो कार्बन डायऑक्साइड शोषून ऑक्सिजन
+      सोडतो, ज्यामुळे हवा शुद्ध करण्यास मदत होते. याची सुंदरता, सुगंध आणि व्यावहारिक उपयोग यामुळे तो बागांसाठी आणि औषधीय
+      उपयोगासाठी एक मौल्यवान वनस्पती मानला जातो."
+
+    </p>
+  </div>
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree12.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

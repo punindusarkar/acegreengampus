@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hibiscus rosa-sinensis
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Hibiscus rosa-sinensis
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree25.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Hibiscus rosa-sinensis
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree25.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Hibiscus rosa-sinensis
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Hibiscus, Chinese Hibiscus, Shoe Flower
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Malvaceae
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Shrub or small tree
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Simple, glossy, and deeply lobed leaves
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Varies (red, pink, yellow, white, orange, and purple)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Capsule (contains numerous seeds)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Medium to High (requires regular watering, especially in dry conditions)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes. Hibiscus flowers and leaves are widely used in traditional medicine. They are believed to have
+            anti-inflammatory, antioxidant, and antimicrobial properties. Hibiscus tea, made from the flowers, is
+            popular for its potential benefits, such as lowering blood pressure and aiding digestion.
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes. Hibiscus flowers and leaves are widely used in traditional medicine. They are believed to have
+            anti-inflammatory, antioxidant, and antimicrobial properties. Hibiscus tea, made from the flowers, is
+            popular for its potential benefits, such as lowering blood pressure and aiding digestion.
+
+          </td>
+        </tr>
+        </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "**Hibiscus** (*Hibiscus rosa-sinensis*), commonly known as Chinese Hibiscus or Shoe Flower, is a vibrant and
+      popular shrub or small tree in the Malvaceae family. Native to East Asia, it is widely cultivated for its large,
+      colorful flowers, which bloom in shades of red, pink, yellow, orange, white, and purple, making it a favorite
+      ornamental plant in tropical and subtropical gardens. The plant is characterized by glossy, deeply lobed leaves
+      and can grow up to 10 feet in height, though it is often pruned to maintain a compact shape.
+
+      Hibiscus thrives in warm climates and requires full sun for optimal growth, though it can tolerate partial shade.
+      It prefers well-drained, slightly acidic soil and regular watering, especially during dry periods. The plant is
+      medium to high in water requirements but should not be waterlogged.
+
+      Beyond its ornamental value, Hibiscus has significant medicinal uses. The flowers and leaves are rich in
+      antioxidants and have anti-inflammatory properties. Hibiscus tea, made from the flowers, is known for its
+      potential health benefits, such as lowering blood pressure and aiding digestion. Additionally, the plant
+      contributes to environmental well-being by absorbing carbon dioxide and releasing oxygen, helping improve air
+      quality.
+
+      Overall, Hibiscus is a versatile and beneficial plant that adds beauty and health benefits to any garden or home."
+
+
+    </p>
+
+    <p>
+      "जास्वंद (Hibiscus rosa-sinensis), ज्याला सामान्यतः चायनीज हिबिस्कस किंवा शू फ्लॉवर म्हणून ओळखले जाते, हा मालवेसी
+      कुटुंबातील एक आकर्षक आणि लोकप्रिय झुडूप किंवा लहान वृक्ष आहे. हा पूर्व आशियातील मूळ निवासी असून त्याच्या मोठ्या,
+      रंगीबेरंगी फुलांसाठी मोठ्या प्रमाणावर लागवड केली जाते. त्याची फुले लाल, गुलाबी, पिवळी, नारंगी, पांढरी आणि जांभळ्या
+      रंगात उमलतात, ज्यामुळे हा उष्णकटिबंधीय आणि उपोष्णकटिबंधीय बागांमध्ये एक प्रसिद्ध शोभेचा वनस्पती बनला आहे. हा झाड
+      चमकदार आणि खोल खंडित पाने असलेला असतो आणि 10 फूट उंचीपर्यंत वाढू शकतो, परंतु तो सहसा सुटसुटीत ठेवण्यासाठी छाटणी
+      केली जाते.
+
+      जास्वंद उष्ण हवामानात उत्तम प्रकारे वाढतो आणि चांगल्या वाढीसाठी त्याला भरपूर सूर्यप्रकाशाची गरज असते, जरी तो अंशतः
+      सावली सहन करू शकतो. त्याला चांगली निचरा असलेली, किंचित आम्लयुक्त माती आणि नियमित पाणी लागते, विशेषतः कोरड्या
+      काळात. त्याच्या पाण्याची गरज मध्यम ते जास्त असते, परंतु त्याला जलसंचयापासून वाचवावे.
+
+      शोभेच्या गुणधर्मांव्यतिरिक्त, जास्वंदाचे महत्त्वाचे औषधी उपयोग देखील आहेत. त्याची फुले आणि पाने अँटीऑक्सिडंट्सने
+      समृद्ध असतात आणि त्यामध्ये दाहशामक गुणधर्म असतात. जास्वंदाच्या फुलांपासून बनवलेली चहा रक्तदाब कमी करण्यास आणि
+      पचनास मदत करण्यासाठी प्रसिद्ध आहे. याशिवाय, हा वनस्पती कार्बन डायऑक्साइड शोषून ऑक्सिजन सोडत असल्याने पर्यावरणाच्या
+      दृष्टीनेही फायदेशीर आहे, ज्यामुळे हवेची गुणवत्ता सुधारते.
+
+      एकूणच, जास्वंद हा एक बहुपयोगी आणि फायदेशीर वनस्पती आहे, जो कोणत्याही बागेची किंवा घराची शोभा वाढवण्यासोबतच
+      आरोग्यासाठीही लाभदायक ठरतो."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree25.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

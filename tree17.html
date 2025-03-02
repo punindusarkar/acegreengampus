@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carapichea ipecacuanha
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Carapichea ipecacuanha
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree17.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Carapichea ipecacuanha
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree17.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Carapichea ipecacuanha
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Ipecacuanha, Ipecac Root
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Rubiaceae
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Perennial Herbaceous Plant
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Broad, ovate, dark green leaves with a glossy texture
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, white or pale pink flowers in clusters
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Small, red or dark purple berries
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>High (thrives in moist, well-drained tropical soils)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Known for its emetic (vomiting-inducing) properties Used in traditional medicine to treat poisoning,
+            respiratory infections, and digestive issues Contains emetine and cephaeline, which have expectorant and
+            anti-amoebic properties Used in small doses for treating cough, bronchitis, and dysentery
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>इपेकेक (Ipecac) हे त्याच्या वमनकारी (उलटी आणणाऱ्या) गुणधर्मांसाठी ओळखले जाते. पारंपरिक औषधांमध्ये याचा
+            उपयोग विषबाधा (poisoning), श्वसनसंस्थेच्या संसर्गांवर आणि पचनासंबंधी तक्रारींवर उपचार करण्यासाठी केला जातो.
+            यात इमेटीन (emetine) आणि सेफालीन (cephaeline) हे घटक असतात, ज्यांना कफ बाहेर टाकण्याचे (expectorant) आणि
+            अमीबाविरोधी (anti-amoebic) गुणधर्म असतात. कमी प्रमाणात घेतल्यास हे खोकला, ब्रॉन्कायटिस आणि अतिसार
+            (dysentery) उपचारांसाठी वापरले जाते.
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Carapichea ipecacuanha, commonly known as Ipecacuanha or Ipecac Root, is a small perennial herb belonging to the
+      Rubiaceae family. It is native to the rainforests of South America, particularly in Brazil, Colombia, and Peru.
+      The plant features dark green, glossy leaves and produces small, white or pale pink flowers that later develop
+      into red or dark purple berries. It thrives in moist, well-drained soils with high water requirements, making it
+      well-suited for humid tropical environments.
+
+      Ipecacuanha is highly valued for its medicinal properties, primarily due to its emetine and cephaeline alkaloids.
+      These compounds are known for their expectorant and anti-amoebic properties, making them effective in treating
+      cough, bronchitis, and dysentery. Historically, it has been used as an emetic (vomiting-inducing agent) to treat
+      poisoning and digestive issues. Although it is beneficial in controlled doses, excessive consumption can be toxic.
+
+      Apart from its medicinal importance, Ipecacuanha contributes to the environment by absorbing carbon dioxide and
+      releasing oxygen, improving air quality. Due to overharvesting, wild populations have declined, and conservation
+      efforts are being made to cultivate the plant sustainably. Despite its small size, Ipecacuanha remains one of the
+      most historically significant medicinal plants in herbal medicine."
+
+    </p>
+    <p>
+      "Carapichea ipecacuanha, ज्याला सामान्यतः इपेकेकुआन्हा किंवा इपेकेक रूट म्हटले जाते, हा रुबिएसी (Rubiaceae)
+      कुटुंबातील एक लहान बहुवर्षीय (perennial) वनस्पती आहे. हा प्रामुख्याने दक्षिण अमेरिकेच्या पर्जन्यवनांमध्ये, विशेषतः
+      ब्राझील, कोलंबिया आणि पेरू येथे आढळतो. या वनस्पतीला गडद हिरवी, चमकदार पाने असतात आणि ती लहान पांढऱ्या किंवा फिकट
+      गुलाबी फुलांपासून फळधारणा करते, जी तांबड्या किंवा गडद जांभळ्या रंगाच्या बेऱ्यांमध्ये विकसित होतात. हे झाड नम,
+      उत्तम निचरा होणाऱ्या जमिनीत चांगले वाढते आणि दमट उष्णकटिबंधीय वातावरणात भरभराटीला येते.
+
+      इपेकेकुआन्हा ही औषधी दृष्टीने खूप मौल्यवान वनस्पती आहे, कारण यात इमेटीन (emetine) आणि सेफालीन (cephaeline) नावाचे
+      शक्तिशाली अल्कलॉइड्स असतात. हे संयुगं कफ काढून टाकणारे (expectorant) आणि अमीबाविरोधी (anti-amoebic) गुणधर्म असलेले
+      आहेत, ज्यामुळे हे खोकला, ब्रॉन्कायटिस आणि अतिसार (dysentery) सारख्या आजारांवर प्रभावी आहे. पूर्वी याचा उपयोग वमन
+      (उलटी) घडवून आणणारे औषध म्हणून विषबाधा आणि पचनाच्या समस्यांवर केला जात असे. मात्र, जास्त प्रमाणात घेतल्यास हे
+      विषारी ठरू शकते.
+
+      औषधी महत्त्वाच्या उपयोगांव्यतिरिक्त, इपेकेकुआन्हा वनस्पती पर्यावरणासाठी उपयुक्त आहे, कारण ती कार्बन डायऑक्साइड
+      शोषून ऑक्सिजन सोडते, ज्यामुळे हवा शुद्ध होते. जंगली ठिकाणी याचे अति-शोषण (overharvesting) झाल्याने त्याची संख्येत
+      घट झाली आहे, त्यामुळे शाश्वत शेतीद्वारे याचे संवर्धन करण्याचे प्रयत्न सुरू आहेत. त्याच्या लहान आकार असूनही,
+      इपेकेकुआन्हा पारंपरिक हर्बल औषधांमध्ये महत्त्वाची भूमिका बजावते."
+
+    </p>
+  </div>
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree17.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annona squamosa
+
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Annona squamosa
+
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree30.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Annona squamosa
+
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree30.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Annona squamosa
+
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Sugar Apple, Sweetsop, Custard Apple
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Annonaceae
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Deciduous Shrub or Small Tree
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Simple, lanceolate, green leaves with a smooth texture
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Pale green to yellow, fragrant flowers
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Aggregate fruit (Custard Apple) – round, green, segmented, sweet, and creamy flesh
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate (prefers well-drained soil, drought-tolerant once established)
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes Used in traditional medicine for diabetes, dysentery, and skin infections The leaves have
+            antibacterial, anti-inflammatory, and analgesic properties Seeds are used in insect repellents but are toxic
+            if consumedThe fruit is rich in Vitamin C, B6, iron, and fiber, aiding digestion and immunity
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>होय, पारंपारिक औषधीत मधुमेह, अतिसार आणि त्वचारोगांसाठी वापरले जाते. पानांमध्ये प्रतिजैविक, प्रतिउत्साही,
+            आणि वेदनाशामक गुणधर्म असतात. बिया कीटक नष्ट करणारे पदार्थ म्हणून वापरल्या जातात, परंतु सेवन केल्यास विषारी
+            असतात. फळामध्ये व्हिटॅमिन C, B6, लोह, आणि फायबर्सची प्रचंड प्रमाणात उपस्थिती असते, जी पचन आणि रोगप्रतिकार
+            शक्तीला सहाय्यक आहे.
+
+
+          </td>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "Annona squamosa, commonly known as Sugar Apple, Sweetsop, or Custard Apple, is a deciduous shrub or small tree
+      belonging to the Annonaceae family. It is native to tropical America and the West Indies but is widely cultivated
+      in India, Southeast Asia, and Africa for its sweet, segmented fruit. The tree has simple, lanceolate green leaves
+      and produces pale green to yellow fragrant flowers. The fruit is round, green, and bumpy, with a soft, creamy, and
+      sweet pulp, often compared to custard.
+
+      This tree thrives in warm, humid climates, requiring moderate watering and well-drained soil. It grows up to 3–8
+      meters and begins fruiting within 3–4 years. The sugar apple is nutrient-rich, containing Vitamin C, B6, iron, and
+      fiber, which support digestion, immunity, and energy production.
+
+      In traditional medicine, the tree is valued for its antibacterial, anti-inflammatory, and analgesic properties. It
+      is used to treat diabetes, dysentery, and skin infections. However, the seeds are toxic if consumed and are often
+      used in insect repellents. Environmentally, Annona squamosa contributes to carbon dioxide absorption and oxygen
+      release, improving air quality. Due to its nutritional, medicinal, and economic importance, this tree is widely
+      cultivated and appreciated worldwide."
+
+
+
+    </p>
+    <p>
+      """अन्नोना स्क्वामोसा, ज्याला साखर सफरचंद, स्वीटसॉप किंवा कस्टर्ड सफरचंद म्हणून ओळखले जाते, हा अ‍ॅनोनासी
+      कुटुंबातील एक पर्णपाती झुडूप किंवा लहान झाड आहे. हा उष्णकटिबंधीय अमेरिका आणि पश्चिम इंडिजचा native आहे, परंतु
+      भारत, दक्षिण-पूर्व आशिया आणि आफ्रिकेत त्याच्या गोड, विभागलेल्या फळांसाठी मोठ्या प्रमाणात लागवड केली जाते. या
+      झाडाची साधी, lanceolate आकाराची हिरवी पाने असतात आणि त्यात फिकट हिरव्या ते पिवळ्या रंगाच्या सुगंधी फुलांचा उत्पादन
+      होतो. फळ गोल, हिरवे आणि खसखशीत असते, त्यात एक मऊ, क्रीमी, आणि गोड गूळ असतो, जो प्रामुख्याने कस्टर्डसारखा असतो.
+
+      हे झाड उष्ण, आर्द्र हवामानात समृद्ध असते, त्याला मध्यम पाणी देणे आणि चांगले निचरा होणारी माती आवश्यक आहे. हे झाड
+      3-8 मीटर पर्यंत वाढते आणि 3-4 वर्षांमध्ये फळे देण्यास सुरू होते. साखर सफरचंद हे पोषक तत्वांनी भरलेले असते, ज्यात
+      व्हिटॅमिन C, B6, लोह आणि फायबर्स असतात, जे पचन, रोगप्रतिकारक क्षमता आणि उर्जा उत्पादनाला समर्थन देतात.
+
+      पारंपारिक औषधीत, या झाडाचे प्रतिजैविक, प्रतिउत्साही, आणि वेदनाशामक गुणधर्मांसाठी महत्त्व आहे. मधुमेह, अतिसार आणि
+      त्वचारोगांच्या उपचारासाठी वापरले जाते. तथापि, बिया विषारी असतात आणि जरी सेवन केल्यास विषारी ठरू शकतात, पण या
+      बियांचा कीटक नष्ट करणारे पदार्थ म्हणून वापर केला जातो. पर्यावरणीय दृष्टिकोनातून, अन्नोना स्क्वामोसा कार्बन
+      डायऑक्साईड शोषण आणि ऑक्सिजन सोडण्यास मदत करते, ज्यामुळे वायू गुणवत्तेत सुधारणा होते. पोषणतत्त्व, औषधीय, आणि आर्थिक
+      महत्त्वामुळे, हे झाड जागतिक स्तरावर मोठ्या प्रमाणावर लागवड केले जाते आणि कौतुक केले जाते."""
+
+    </p>
+  </div>
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree30.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

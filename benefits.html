@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits - ACE Tree Information</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* General Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f3;
+            color: #2a2a2a;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #264653;
+            color: #f0efeb;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e9c46a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0efeb;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e9c46a;
+            color: #264653;
+        }
+
+        /* Main Content Styles */
+        .container {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #264653;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+
+        .content-section {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .content-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #031d28;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo-image {
+            height: 50px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .c1{
+            
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #fe8686;
+      
+        }
+
+        .footer-links a:hover {
+            color: #00aaff;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .logo {
+                font-size: 1.5em;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+
+            ul li {
+                font-size: 0.9em;
+            }
+
+            .text-overlay {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+
+            .card-gallery {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .card img {
+                height: 150px;
+            }
+
+            .footer-content {
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .footer-logo-image {
+                height: 40px;
+            }
+
+            .footer-links,
+            .footer-social {
+                gap: 10px;
+            }
+
+            .footer-bottom {
+                font-size: 0.8rem;
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                nav {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .card-gallery {
+                    grid-template-columns: 1fr;
+                }
+
+                .text-overlay {
+                    font-size: 0.8rem;
+                    padding: 5px 8px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+            ACE Tree Information
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="benefits.html">Benefits</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Benefits of ACE Tree Information</h1>
+
+        <div class="content-section">
+            <h2>Environmental Benefits</h2>
+            <p>ACE Tree Information helps raise awareness about the importance of trees in maintaining ecological
+                balance. Some of the key environmental benefits include:</p>
+            <ul>
+                <li><strong>Improved Air Quality:</strong> Trees absorb carbon dioxide and release oxygen, improving the
+                    overall air quality.</li>
+                <li><strong>Climate Control:</strong> Trees help regulate temperature and reduce the urban heat island
+                    effect by providing shade and cooling the environment.</li>
+                <li><strong>Soil Conservation:</strong> The roots of trees prevent soil erosion and improve soil
+                    quality.</li>
+                <li><strong>Support for Wildlife:</strong> Trees provide habitats for birds, insects, and other
+                    wildlife, promoting biodiversity.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Health Benefits</h2>
+            <p>Through this project, we aim to highlight the mental and physical health benefits that come from trees
+                and green spaces:</p>
+            <ul>
+                <li><strong>Stress Reduction:</strong> Spending time in nature and around trees can help reduce stress
+                    and anxiety levels.</li>
+                <li><strong>Improved Mental Health:</strong> Trees provide natural landscapes that improve mood and
+                    increase cognitive function.</li>
+                <li><strong>Physical Health:</strong> Trees contribute to cleaner air and promote better respiratory
+                    health for individuals in urban areas.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Educational Benefits</h2>
+            <p>This project also serves as an educational resource, promoting the understanding of the importance of
+                trees. The key educational benefits include:</p>
+            <ul>
+                <li><strong>Increased Awareness:</strong> The platform provides easy access to information about tree
+                    species, their roles in the environment, and how to care for them.</li>
+                <li><strong>Research Opportunities:</strong> This platform encourages students and researchers to
+                    explore various aspects of tree conservation and environmental sustainability.</li>
+                <li><strong>Community Engagement:</strong> The project aims to foster community involvement in tree
+                    planting and sustainability initiatives.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Technological Advancements</h2>
+            <p>The ACE Tree Information platform incorporates modern web technologies to provide a seamless and
+                interactive user experience:</p>
+            <ul>
+                <li><strong>Interactive Web Interface:</strong> Users can explore various tree species, learn about
+                    their benefits, and interact with visually appealing content.</li>
+                <li><strong>Mobile-Friendly:</strong> The website is designed to be accessible across devices, making it
+                    easy for users to access tree-related information on-the-go.</li>
+                <li><strong>Responsive Design:</strong> The site adapts to different screen sizes, ensuring optimal
+                    viewing and navigation experience for all users.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Social Impact</h2>
+            <p>By spreading knowledge and encouraging tree planting, the project aims to have a positive impact on
+                society and contribute to the well-being of future generations:</p>
+            <ul>
+                <li><strong>Promotes Sustainability:</strong> Encourages sustainable practices such as tree plantation
+                    and conservation of natural resources.</li>
+                <li><strong>Community Awareness:</strong> Helps communities understand the importance of trees in
+                    reducing environmental challenges such as pollution and climate change.</li>
+                <li><strong>Inspires Action:</strong> Encourages individuals and organizations to take action for a
+                    greener and healthier environment.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+                <p class="c1">ACE Tree Information</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="benefits.html">Benefits</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="c1">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

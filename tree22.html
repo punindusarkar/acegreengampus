@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficus elastica
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Ficus elastica
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree22.jpg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Ficus elastica
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree22.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Ficus elastica
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Rubber Fig, Indian Rubber Tree, Rubber Plant
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Moraceae
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Tree or shrub
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Large, leathery, glossy, elliptical leaves
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Small, inconspicuous flowers (often hidden within the fruit)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Figs (small, round, and typically green, turning purple when ripe)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Medium (requires moderate watering; prefers well-drained soil and can tolerate occasional dry periods)
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>Yes.Traditionally, the latex from the Rubber Fig has been used in folk medicine for its anti-inflammatory
+            properties and to treat wounds or burns.Some studies have suggested that the plant may have potential
+            medicinal applications, although it's not commonly used for clinical purposes.
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>होय। पारंपरिक पद्धतीमध्ये रबर फिग (Rubber Fig) चा लेटेक्स (दूधासारखा चिकट रस) दाहशामक (anti-inflammatory)
+            गुणधर्मांमुळे वापरला जात होता आणि तो जखमा व भाजण्याच्या उपचारांसाठी उपयोगात आणला जात असे. काही संशोधनांमध्ये
+            असे सुचवले आहे की या वनस्पतीमध्ये संभाव्य औषधी गुणधर्म असू शकतात, परंतु याचा वैद्यकीय उपयोग सामान्यतः केला
+            जात नाही।
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "**Rubber Fig** (*Ficus elastica*), also known as the Indian Rubber Tree or Rubber Plant, is a large tree or shrub
+      native to Southeast Asia, particularly India, Myanmar, and Malaysia. It belongs to the Moraceae family and is
+      widely cultivated as an ornamental plant due to its large, glossy, elliptical leaves. These leathery, green leaves
+      make the Rubber Fig a popular choice for both indoor and outdoor gardens. When grown indoors, the plant can reach
+      6–10 feet in height, though in its natural habitat, it can grow up to 100 feet tall.
+
+      The Rubber Fig prefers moderate watering and well-drained soil, tolerating occasional dry periods. It thrives in
+      bright, indirect light but can also adapt to lower light conditions. It is ideal for warm, humid climates and
+      should be protected from cold drafts or temperatures below 50°F (10°C).
+
+      While the plant's small, inconspicuous flowers are rarely seen, it produces figs that turn purple when ripe.
+      Traditionally, the latex from the Rubber Fig has been used in folk medicine for its anti-inflammatory properties.
+      Additionally, like other plants, *Ficus elastica* contributes to the environment by absorbing carbon dioxide and
+      releasing oxygen, improving air quality. Its easy care requirements make it a favored choice for home and office
+      decoration."
+
+
+    </p>
+
+    <p>
+      "रबर फिग (Ficus elastica), ज्याला भारतीय रबर झाड किंवा रबर प्लांट असेही म्हणतात, हा एक मोठा वृक्ष किंवा झुडूप आहे
+      जो प्रामुख्याने दक्षिण-पूर्व आशियातील भारत, म्यानमार आणि मलेशिया येथे आढळतो. हे मोरेसी (Moraceae) कुटुंबातील असून,
+      याच्या मोठ्या, चकचकीत, लंबगोलाकार पानांमुळे याला सौंदर्यदृष्ट्या आकर्षक वनस्पती म्हणून मोठ्या प्रमाणावर लागवड केली
+      जाते. या चामड्याच्यासरख्या घट्ट हिरव्या पानांमुळे हे झाड घरातील आणि बाहेरील बागांसाठी एक लोकप्रिय पर्याय आहे. जर
+      हे झाड घरामध्ये लावले, तर ते 6-10 फूट उंच वाढू शकते, तर नैसर्गिकरित्या त्याची उंची 100 फूटांपर्यंत जाऊ शकते.
+
+      रबर फिग मध्यम प्रमाणात पाणी आणि उत्तम निचर्‍याची माती पसंत करतो, तसेच तो कधी कधी कोरड्या हवामानाला सहन करू शकतो.
+      हा झाड तेजस्वी पण अप्रत्यक्ष प्रकाशात चांगला वाढतो, तसेच कमी प्रकाशातही टिकून राहू शकतो. हे झाड उष्ण आणि दमट
+      हवामानासाठी योग्य आहे आणि थंड वारे किंवा 50°F (10°C) पेक्षा कमी तापमानापासून संरक्षित ठेवणे आवश्यक आहे.
+
+      या झाडाला लहान आणि फारसे आकर्षक नसलेली फुले येतात, जी सहसा क्वचितच दिसतात. मात्र, हे झाड पिकल्यानंतर जांभळ्या
+      रंगाचे अंजीर (figs) फळ तयार करते. पारंपरिक औषधांमध्ये, रबर फिगच्या लेटेक्सचा उपयोग दाहशामक (anti-inflammatory)
+      गुणधर्मांमुळे केला जात असे. याशिवाय, Ficus elastica कार्बन डायऑक्साइड शोषून आणि ऑक्सिजन सोडून पर्यावरणातील हवेची
+      गुणवत्ता सुधारण्यात मदत करतो. त्याच्या सुलभ देखभालीमुळे हे झाड घर आणि ऑफिसच्या सजावटीसाठी एक उत्कृष्ट पर्याय मानले
+      जाते."
+
+    </p>
+  </div>
+
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree22.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

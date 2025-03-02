@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosa 'Eden'
+
+
+    Information</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eef2f3;
+      /* Soft gray-blue for a calm background */
+      color: #2a2a2a;
+      /* Dark gray for text readability */
+      line-height: 1.8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #264653;
+      /* Deep teal for a modern, bold look */
+      color: #f0efeb;
+      /* Off-white for contrast */
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #e9c46a;
+      /* Warm yellow for a touch of vibrancy */
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /* Space between the logo and text */
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f0efeb;
+      font-size: 0.9em;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e9c46a;
+      /* Highlight with warm yellow */
+      color: #264653;
+      /* Inverted text color for hover state */
+    }
+
+
+
+    .container {
+      text-align: center;
+      padding: 20px 10px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(177, 203, 240, 0.776);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .tree-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tree-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .audio-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .tree-details table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .tree-details th,
+    .tree-details td {
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .tree-details th {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .container1 p {
+      margin: 20px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    /* Footer overall styling */
+    .footer {
+      background-color: #031d28;
+      /* Dark background color */
+      color: #fff;
+      /* White text color */
+      padding: 20px 0;
+      /* Padding around the footer */
+      text-align: center;
+      /* Center-align text */
+      font-family: Arial, sans-serif;
+      /* Font style */
+    }
+
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      /* Stack content vertically */
+      align-items: center;
+      /* Center content horizontally */
+      gap: 20px;
+      /* Space between sections */
+      max-width: 1200px;
+      /* Limit the width of the content */
+      margin: 0 auto;
+      /* Center the content */
+    }
+
+    /* Footer logo styling */
+    .footer-logo {
+      text-align: center;
+    }
+
+    /* Logo image size */
+    .footer-logo-image {
+      height: 50px;
+      /* Logo height */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-bottom: 10px;
+      /* Space below the logo */
+    }
+
+    /* Navigation links styling */
+    .footer-links,
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      /* Space between links */
+      flex-wrap: wrap;
+      /* Allow wrapping on smaller screens */
+      justify-content: center;
+      /* Center-align the links */
+    }
+
+    /* Link styling */
+    .footer-links a,
+    .footer-social a {
+      color: #fff;
+      /* White text color */
+      text-decoration: none;
+      /* Remove underline */
+      transition: color 0.3s ease;
+      /* Smooth color change on hover */
+    }
+
+    /* Hover effect for links */
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #00aaff;
+      /* Light blue hover color */
+    }
+
+    /* Footer bottom section styling */
+    .footer-bottom {
+      margin-top: 20px;
+      /* Space above the bottom section */
+      font-size: 0.9rem;
+      /* Smaller font size */
+      opacity: 0.7;
+      /* Slightly transparent text */
+    }
+
+    .footertext {
+      color: #dd6a6a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+      ACE Tree Information
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1> Rosa 'Eden'
+
+    </h1>
+    <p>Here's information:</p>
+  </div>
+
+
+  <div class="container">
+    <!-- Mango Tree Image -->
+    <div class="tree-image">
+      <img src="images\tree40.jpeg" alt="Mango Tree">
+    </div>
+
+    <!-- Mango Tree Details -->
+    <div class="tree-details">
+      <div class="audio-section">
+        <h2>Listen to Rosa 'Eden'
+
+          Information</h2>
+        <audio controls autoplay>
+          <source src="audios\tree40.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <h2>Tree Details</h2>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Scientific Name</td>
+          <td><i>Rosa 'Eden'
+
+            </i></td>
+        </tr>
+        <tr>
+          <td>Common Name</td>
+          <td>Eden Rose, Pierre de Ronsard Rose
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Family</td>
+          <td>Rosaceae
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Climbing Rose
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Leaf Type</td>
+          <td>Deciduous, dark green, glossy leaves
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Flower Color</td>
+          <td>Creamy white with soft pink hues, sometimes deep pink at the center
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Fruit Type</td>
+          <td>Rose hips (small, red, berry-like fruits)
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Water Requirements</td>
+          <td>Moderate; requires regular watering but well-drained soil
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses</td>
+          <td>No significant medicinal uses
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Medicinal Uses In Marathi</td>
+          <td>कोणतेही महत्त्वाचे औषधीय उपयोग नाही.
+
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>Location in Garden</td>
+          <td>Near the main entrance</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      "The Eden Rose (Rosa 'Eden'), also known as Pierre de Ronsard Rose, is a stunning climbing rose variety from the
+      Rosaceae family. It was bred by Marie-Louise Meilland in 1985 and introduced by Meilland International, quickly
+      becoming one of the most popular romantic roses worldwide.
+
+      This deciduous climber is well-known for its large, cupped flowers with a delicate cream-white color and soft pink
+      blush, sometimes displaying a deeper pink center. The flowers have a mild yet enchanting fragrance and bloom
+      repeatedly throughout the growing season, making it a favorite for garden trellises, arches, and walls.
+
+      The Eden Rose requires moderate watering and thrives in full sun with rich, well-drained soil. It is
+      disease-resistant, making it low-maintenance compared to other rose varieties. While it does not have significant
+      medicinal uses, it contributes to air purification by absorbing carbon dioxide and releasing oxygen.
+
+      Due to its romantic appearance, vigorous growth, and disease resistance, the Eden Rose remains a highly
+      sought-after choice for gardeners looking to add beauty and elegance to their outdoor spaces. Its timeless charm
+      and resilience make it a symbol of love and grace in gardens worldwide."
+
+
+
+    </p>
+    <p>
+      "एडन रोज (Rosa 'Eden'), ज्याला पियरे दे रॉन्सार्ड रोज देखील म्हणतात, हा रोजेच्या कुटुंबातील एक आकर्षक चढणारा गुलाब
+      आहे. 1985 मध्ये मारी-लुईस मेल्लांड यांनी त्याचे प्रजनन केले आणि मेल्लांड इंटरनॅशनलद्वारे तो बाजारात आणला, आणि
+      लवकरच हा जगभरातील एक अत्यंत लोकप्रिय रोमँटिक गुलाब बनला.
+
+      हा पर्णपाती चढणारा गुलाब त्याच्या मोठ्या, कप-आकाराच्या फुलांसाठी ओळखला जातो, ज्यांचे रंग कोमट क्रीम-रंगाचे आणि
+      सौम्य गुलाबी चटक असतात, कधी कधी त्यात गडद गुलाबी मध्यभाग दिसतो. या फुलांचा सौम्य परंतु मोहक सुगंध असतो आणि ते
+      वाढीच्या हंगामात वारंवार फुलतात, ज्यामुळे ते बागेतील ट्रेलिसेस, आर्चेस आणि भिंतीसाठी आवडते आहे.
+
+      एडन रोजला मध्यम पाणी देणे आवश्यक आहे आणि ते पूर्ण सूर्यप्रकाशात आणि समृद्ध, चांगले निचरा होणाऱ्या मातीमध्ये उत्तम
+      प्रकारे वाढते. ते रोगप्रतिबंधक असते, ज्यामुळे इतर गुलाबांच्या प्रकारांपेक्षा कमी देखभाल आवश्यक असते. याचे
+      महत्त्वाचे औषधीय उपयोग नाहीत, परंतु ते कार्बन डायऑक्साइड शोषून आणि ऑक्सिजन सोडून हवेची शुद्धता सुधारण्यास मदत
+      करते.
+
+      त्याच्या रोमँटिक देखाव्यामुळे, तीव्र वाढ आणि रोग प्रतिकारामुळे, एडन रोज हा बागकाम करणाऱ्यांसाठी एक अत्यंत लोकप्रिय
+      पर्याय आहे, ज्यामुळे ते त्यांच्या बाह्य जागेत सौंदर्य आणि भव्यता वाढवू इच्छितात. त्याचा शाश्वत आकर्षण आणि
+      प्रतिकारशक्ती ही बागांमधील प्रेम आणि सौंदर्याचा प्रतीक बनवते."
+
+    </p>
+  </div>
+
+  
+
+  <div class="container">
+    <h1>Download File Example</h1>
+    <p>Click the button below to download the file:</p>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+
+
+  <footer>
+    <footer class="footer">
+      <!-- Footer main content -->
+      <div class="footer-content">
+        <!-- Footer logo and name -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+          <p class="footertext">ACE Tree Information</p>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="benefits.html">Benefits</a>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- Footer bottom section -->
+      <div class="footer-bottom">
+        <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function downloadPDF() {
+        const pdfUrl = "files/tree40.pdf"; // Relative path to the PDF in your repository
+        const fileName = "sample.pdf";
+  
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

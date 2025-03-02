@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Information</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* General Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f3;
+            /* Soft gray-blue for a calm background */
+            color: #2a2a2a;
+            /* Dark gray for text readability */
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #264653;
+            /* Deep teal for a modern, bold look */
+            color: #f0efeb;
+            /* Off-white for contrast */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #e9c46a;
+            /* Warm yellow for a touch of vibrancy */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Space between the logo and text */
+        }
+
+        nav {
+            display: flexbox;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0efeb;
+            font-size: 0.9em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e9c46a;
+            /* Highlight with warm yellow */
+            color: #264653;
+            /* Inverted text color for hover state */
+        }
+
+        /* Main Content Styles */
+        .container {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #264653;
+            /* Header color to align with theme */
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+
+        ul {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1em;
+            margin: 10px 0;
+            color: #264653;
+            /* Consistent with the header theme */
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .text-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Card Gallery */
+        .card-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #264653;
+        }
+
+        .card-title a {
+            text-decoration: none;
+            color: #264653;
+            transition: color 0.3s ease;
+        }
+
+        .card-title a:hover {
+            color: #e76f51;
+        }
+
+        /* Footer overall styling */
+        .footer {
+            background-color: #031d28;
+            /* Dark background color */
+            color: #fff;
+            /* White text color */
+            padding: 20px 0;
+            /* Padding around the footer */
+            text-align: center;
+            /* Center-align text */
+            font-family: Arial, sans-serif;
+            /* Font style */
+            margin-top: auto;
+            /* Ensure footer stays at the bottom */
+            width: 100%;
+            /* Full width */
+            position: relative;
+        }
+
+        /* Footer content styling */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            /* Stack content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            gap: 20px;
+            /* Space between sections */
+            max-width: 1200px;
+            /* Limit the width of the content */
+            margin: 0 auto;
+            /* Center the content */
+        }
+
+        /* Footer logo styling */
+        .footer-logo {
+            text-align: center;
+        }
+
+        /* Logo image size */
+        .footer-logo-image {
+            height: 50px;
+            /* Logo height */
+            width: auto;
+            /* Maintain aspect ratio */
+            margin-bottom: 10px;
+            /* Space below the logo */
+        }
+
+        /* Navigation links styling */
+        .footer-links,
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            /* Space between links */
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+            justify-content: center;
+            /* Center-align the links */
+        }
+
+        /* Link styling */
+        .footer-links a,
+        .footer-social a {
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            /* Remove underline */
+            transition: color 0.3s ease;
+            /* Smooth color change on hover */
+        }
+
+        /* Hover effect for links */
+        .footer-links a:hover,
+        .footer-social a:hover {
+            color: #00aaff;
+            /* Light blue hover color */
+        }
+
+        /* Footer bottom section styling */
+        .footer-bottom {
+            margin-top: 20px;
+            /* Space above the bottom section */
+            font-size: 0.9rem;
+            /* Smaller font size */
+            opacity: 0.7;
+            /* Slightly transparent text */
+        }
+
+        .footertext {
+            color: #dd6a6a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .logo {
+                font-size: 1.5em;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+
+            ul li {
+                font-size: 0.9em;
+            }
+
+            .text-overlay {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+
+            .card-gallery {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .card img {
+                height: 150px;
+            }
+
+            .footer-content {
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .footer-logo-image {
+                height: 40px;
+            }
+
+            .footer-links,
+            .footer-social {
+                gap: 10px;
+            }
+
+            .footer-bottom {
+                font-size: 0.8rem;
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                nav {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .card-gallery {
+                    grid-template-columns: 1fr;
+                }
+
+                .text-overlay {
+                    font-size: 0.8rem;
+                    padding: 5px 8px;
+                }
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ACE Tree Logo" style="height: 50px; width: auto;">
+            ACE Tree Information
+        </div>
+
+        <nav>
+            <a href="about.html">About</a>
+            <a href="benefits.html">Benefits</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Tree Information</h1>
+        <p>Here's some information about trees:</p>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="images/slider1.jpg" alt="Tree 1">
+            <img src="images/slider2.jpg" alt="Tree 2">
+            <img src="images/slider3.jpg" alt="Tree 3">
+            <img src="images/slider4.jpg" alt="Tree 4">
+            <img src="images/slider5.jpg" alt="Tree 5">
+        </div>
+        <div class="text-overlay">Nature's Marvel</div>
+    </div>
+
+    <div class="container">
+        <h1>Tree Gallery</h1>
+        <p>Here's a list and information about trees:</p>
+    </div>
+
+    <!-- Card Gallery -->
+    <div class="card-gallery">
+        <div class="card">
+            <img src="images/tree1.jpg" alt="Tree 1">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree1.html">Euphorbia Milii</a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree2.jpg" alt="Tree 2">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree2.html">Piptadenia Peregrina</a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree3.jpg" alt="Tree 3">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree3.html">Tectona Grandis</a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree4.jpg" alt="Tree 4">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree4.html">Ficus benghalensis
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree5.jpg" alt="Tree 5">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree5.html">Ixora coccinea</a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree6.jpg" alt="Tree 6">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree6.html">Ficus carica
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree7.jpg" alt="Tree 3">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree7.html">Euphorbia tithymaloides
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree8.jpeg" alt="Tree 8">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree8.html">Aloe vera
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree9.jpg" alt="Tree 9">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree9.html">Gardenia jasminoides</a>
+                </h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree10.jpg" alt="Tree 10">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree10.html">Jasminum officinale
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree11.jpeg" alt="Tree 11">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree11.html">Ocimum tenuiflorum
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree12.jpg" alt="Tree 12">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree12.html">Murraya paniculata
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree13.jpg" alt="Tree 13">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree13.html">Jasminum sambac
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree14.jpg" alt="Tree 14">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree14.html">Ravenea rivularis
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree15.jpg" alt="Tree 15">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree15.html">Cestrum nocturnum
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree16.jpg" alt="Tree 16">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree16.html">Dendropanax spp
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree17.jpg" alt="Tree 17">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree17.html">Carapichea ipecacuanha
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree18.jpg" alt="Tree 18">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree18.html">Rauvolfia tetraphylla
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree19.jpg" alt="Tree 19">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree19.html">Clerodendrum trichotomum
+                    </a></h3>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/tree20.jpeg" alt="Tree 20">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree20.html">Clerodendrum trichotomum
+                    </a></h3>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/tree21.jpeg" alt="Tree 21
+            ">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree21.html">Ixora coccinea
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree22.jpg" alt="Tree 22">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree22.html">Ficus elastica
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree23.jpg" alt="Tree 23">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree23.html">Ixora coccinea</a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree24.jpg" alt="Tree 24">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree24.html">Plumeria pudica
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree25.jpg" alt="Tree 25">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree25.html">Hibiscus rosa-sinensis
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree26.jpg" alt="Tree 26">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree26.html">Mangifera indica
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree27.jpeg" alt="Tree 27">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree27.html">Bougainvillea spp.
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree28.jpg" alt="Tree 28">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree28.html">Chamaecyparis spp.
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree29.jpg" alt="Tree 29">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree29.html">Ficus benjamina
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree30.jpg" alt="Tree 30">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree30.html">Annona squamosa
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree31.jpg" alt="Tree 31">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree31.html">Mussaenda spp
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree32.jpg" alt="Tree 32">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree32.html">Calliandra spp.
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree33.jpg" alt="Tree 33">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree33.html"> Pithecellobium dulce
+                    </a>
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree34.jpg" alt="Tree 34">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree34.html">Pandanus tectorius
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree35.jpg" alt="Tree 35">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree35.html">Clivia miniata
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree36.jpg" alt="Tree 36">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree36.html">Cycas revoluta
+                        .
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree37.jpeg" alt="Tree 37">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree37.html">Dieffenbachia seguine
+                    </a>
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree38.jpeg" alt="Tree 38">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree38.html">Heterospathe spp
+
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree39.jpeg" alt="Tree 39">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree39.html">Azadirachta indica
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree40.jpeg" alt="Tree 40">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree40.html">Rosa 'Eden'
+
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree41.jpeg" alt="Tree 41">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree41.html">Tabernaemontana divaricata
+                    </a>
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree42.jpeg" alt="Tree 42">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree42.html">Terminalia catappa
+
+
+                    </a></h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/tree43.jpeg" alt="Tree 42">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree43.html">Terminalia catappa
+
+
+                    </a></h3>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/tree44.jpeg" alt="Tree 42">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree44.html">Terminalia catappa
+
+
+                    </a></h3>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/tree45.png" alt="Tree 42">
+            <div class="card-content">
+                <h3 class="card-title"><a href="tree45.html">Terminalia catappa
+
+
+                    </a></h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <footer class="footer">
+            <!-- Footer main content -->
+            <div class="footer-content">
+                <!-- Footer logo and name -->
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="ACE Tree Logo" class="footer-logo-image">
+                    <p class="footertext">ACE Tree Information</p>
+                </div>
+
+                <!-- Navigation links -->
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="benefits.html">Benefits</a>
+                </div>
+
+                <!-- Social media links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/AgnihotriCollegeOfEngg/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/ace_agni/" target="_blank">Instagram</a>
+                </div>
+            </div>
+
+            <!-- Footer bottom section -->
+            <div class="footer-bottom">
+                <p class="footertext">&copy; 2024 ACE Tree Information. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            // JavaScript for the slider
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            let index = 0;
+
+            function showNextSlide() {
+                index = (index + 1) % totalSlides; // Loop back to the first slide
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            // Auto-slide every 3 seconds
+            setInterval(showNextSlide, 3000);
+        </script>
+    </footer>
+</body>
+
+</html>
